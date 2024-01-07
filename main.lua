@@ -62,11 +62,13 @@ end
 
 function love.load()
 
-	love.window.setTitle("Ponggers")
-
 	bleep = love.audio.newSource("assets/sounds/bleep.ogg", "static")
 	fontSq = love.graphics.newFont("assets/fonts/Square.ttf", 42)
 	fontSqO = love.graphics.newFont("assets/fonts/Squareo.ttf", 42)
+	bgMusic = love.audio.newSource("assets/sounds/music.mp3", "stream")
+	bgMusic:setLooping(true)
+	bgMusic:setVolume(0.25)
+	bgMusic:play()
 
 	winX, winY = love.graphics.getDimensions()
 
