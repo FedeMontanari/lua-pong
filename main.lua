@@ -14,7 +14,7 @@ function detectCollision(tar)
 	return ball.x > tar.x
 		and tar.x + 7 > ball.x
 		and ball.y > tar.y
-		and tar.y + tar.h > ball.y
+		and tar.y + tar.h + 3 > ball.y
 end
 
 
